@@ -1,0 +1,165 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+	font: 400 15px/1.4 "Open Sans", sans-serif;
+	color: #555;
+	box-sizing: border-box;
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 1.2em;
+	margin: 0;
+}
+
+main {
+	margin: 50px auto;
+	width: 400px;
+}
+
+p {
+	font-size: 0.8em;
+	text-align: right;
+}
+
+label {
+	font-size: 0.83em;
+}
+
+label span, p span {
+	color: #0093FF;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+label span:hover, p span:hover {
+	text-decoration: underline;
+}
+
+div > span {
+	opacity: 0;
+	color: red;
+	font-size: 0.8em;
+	transition: 1s;
+}
+
+/* Hace el cambio entre una ventana y otra
+------------------------------------------ */
+
+main > div > input:first-of-type {
+	display: none;
+}
+
+main > div > input:checked ~ * {
+	display: none;
+}
+
+main > div > label:first-of-type {
+	float: right;
+}
+
+/* --------------------------------------- */
+
+form {
+	position: relative;
+}
+
+input {
+	font-size: 1.1em;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	padding: 0 0.5em;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+	line-height: 2em;
+	width: 100%;
+	margin-bottom: 1em;
+	transition: 1s;
+}
+
+input[type="submit"] {
+	float: right;
+	color: white;
+	background: linear-gradient(#168eef, #007ee5);
+    border-color: #0c6ebe;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 0.6em 1.3em;
+}
+
+label[for$="ar"] {
+    width: 170px;
+    vertical-align: text-top;
+}
+
+form > p:last-child {
+	float: left;
+	text-align: left;
+}
+
+/* Regla para que se visualicen bien los
+ textos de los checkbox de los dos formularios
+------------------------------------------ */
+
+main > div:first-child form > div:nth-child(4),
+main > div:last-child form > div:nth-child(5) {
+	float: left;
+	width: 192px;
+}
+
+/* Botón de registro Google
+------------------------------------------ */
+main > div:last-child form > div:nth-child(7) {
+	position: relative;
+	margin-bottom: 5px;
+	text-align: center;
+	clear: both;
+}
+
+
+main > div:last-child form > div:nth-child(7):before {
+	content: '';
+    position: absolute;
+    top: 0.85em;
+    left: 0;
+    right: 0;
+    border-top: 1px solid lightgrey;
+}
+
+main > div:last-child form > div:nth-child(7) > span {
+	color: inherit;
+	display: inline-block;
+    position: relative;
+    padding: 0 12px;
+    background-color: #FFF;
+}
+
+main > div:last-child form > div:last-child > a {
+	position: relative;
+	display: block;
+	float: none;
+	width: 100%;
+	margin-top: 1em;
+	background-color: #4688f1;
+	background-image: url("../img/google.png");
+	background-size: 10px 16px;
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    text-decoration: none;
+    color: white;
+    line-height: 2.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+main > div:last-child form > div:last-child > a:before {
+	content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 28px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+}

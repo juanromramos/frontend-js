@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Agregar elementos DOM | Juan Romero</title>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+		body {
+			font-family: 'Varela Round', sans-serif;
+		}
+		section {
+			text-align: center;
+			margin: 10px auto;
+			padding: 50px 10px;
+			width: 300px;
+			border-radius: 5px;
+			background-color: #EEE;
+			box-shadow: 3px 3px 5px 1px darkgrey;
+		}
+		div div {
+			display: block;
+			margin: 5px auto;
+			/* padding: 2px 10px; IMPORTANTE PARA JUGAR CON LA ALTURA */
+			width: 150px;
+
+			color: white;
+			background-color: darkorange;
+		}
+		button {
+			font-family: 'Varela Round', sans-serif;
+			display: block;
+			margin: 15px auto;
+			padding: 2px 10px;
+			width: 170px;
+		}
+		.mostrar {
+			display: block;
+			cursor: pointer;
+		}
+		.mostrar:active {
+			box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
+		}
+	</style>
+</head>
+<body>
+	<p style="text-align:center">Click izquierdo para agregar elementos</p>
+	<p style="text-align:center">Click derecho para borrarlos</p>
+	<section>
+		<div id='lista'>
+			<div class='mostrar'>Elemento</div>
+			<div class='mostrar'>Elemento</div>
+		</div>
+	</section>
+</body>
+<script src="addremoveelements.js"></script>
+</html>

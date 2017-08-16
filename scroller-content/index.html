@@ -1,0 +1,79 @@
+<!-- Diseñado para un contenedor que agrupe contenedores de la MISMA ALTURA -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroller Content | Juan Romero</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="midiv">1
+		<p class="instrucciones">1. Mueve el cursos a la esquina superior izquierda<br/>
+			2. Introduce la velocidad en milisegundos (ej: 1 segundo => 1000)<br/>
+			3. Selecciona el modo de animación<br/>
+			4. Haz click en los botones de navegación ¡o mueve el cursor manteniendo pulsado el botón izquierdo hacia arriba o abajo!
+		</p>
+		<img src="img/swipe.png"></img>
+	</div>
+	<div class="midiv">2</div>
+	<div class="midiv">3</div>
+	<div class="midiv">4</div>
+	<div class="midiv">5</div>
+	<div class="midiv">6</div>
+</div>
+<section>
+	<label>Velocidad:</label><input class="velocidad" value="500"/><br />
+	<input name="tipo" class="tipo" value="easeInSine" type="radio"/><label>easeInSine</label>
+	<input name="tipo" class="tipo" value="easeOutSine" type="radio"/><label>easeOutSine</label>
+	<input name="tipo" class="tipo" value="easeInOutSine" type="radio"/><label>easeInOutSine</label><br />
+
+	<input name="tipo" class="tipo" value="easeInQuad" type="radio"/><label>easeInQuad</label>
+	<input name="tipo" class="tipo" value="easeOutQuad" type="radio"/><label>easeOutQuad</label>
+	<input name="tipo" class="tipo" value="easeInOutQuad" type="radio"/><label>easeInOutQuad</label><br />
+
+	<input name="tipo" class="tipo" value="easeInCubic" type="radio"/><label>easeInCubic</label>
+	<input name="tipo" class="tipo" value="easeOutCubic" type="radio" checked/><label>easeOutCubic</label>
+	<input name="tipo" class="tipo" value="easeInOutCubic" type="radio"/><label>easeInOutCubic</label><br />
+
+	<input name="tipo" class="tipo" value="easeInQuart" type="radio"/><label>easeInQuart</label>
+	<input name="tipo" class="tipo" value="easeOutQuart" type="radio"/><label>easeOutQuart</label>
+	<input name="tipo" class="tipo" value="easeInOutQuart" type="radio"/><label>easeInOutQuart</label><br />
+
+	<input name="tipo" class="tipo" value="easeInQuint" type="radio"/><label>easeInQuint</label>
+	<input name="tipo" class="tipo" value="easeOutQuint" type="radio"/><label>easeOutQuint</label>
+	<input name="tipo" class="tipo" value="easeInOutQuint" type="radio"/><label>easeInOutQuint</label><br />
+
+	<input name="tipo" class="tipo" value="easeInExpo" type="radio"/><label>easeInExpo</label>
+	<input name="tipo" class="tipo" value="easeOutExpo" type="radio"/><label>easeOutExpo</label>
+	<input name="tipo" class="tipo" value="easeInOutExpo" type="radio"/><label>easeInOutExpo</label><br />
+
+	<input name="tipo" class="tipo" value="easeInCirc" type="radio"/><label>easeInCirc</label>
+	<input name="tipo" class="tipo" value="easeOutCirc" type="radio"/><label>easeOutCirc</label>
+	<input name="tipo" class="tipo" value="easeInOutCirc" type="radio"/><label>easeInOutCirc</label><br />
+
+	<input name="tipo" class="tipo" value="easeInBack" type="radio"/><label>easeInBack</label>
+	<input name="tipo" class="tipo" value="easeOutBack" type="radio"/><label>easeOutBack</label>
+	<input name="tipo" class="tipo" value="easeInOutBack" type="radio"/><label>easeInOutBack</label><br />
+
+	<input name="tipo" class="tipo" value="easeInElastic" type="radio"/><label>easeInElastic</label>
+	<input name="tipo" class="tipo" value="easeOutElastic" type="radio"/><label>easeOutElastic</label>
+	<input name="tipo" class="tipo" value="easeInOutElastic" type="radio"/><label>easeInOutElastic</label><br />
+
+	<input name="tipo" class="tipo" value="easeInBounce" type="radio"/><label>easeInBounce</label>
+	<input name="tipo" class="tipo" value="easeOutBounce" type="radio"/><label>easeOutBounce</label>
+	<input name="tipo" class="tipo" value="easeInOutBounce" type="radio"/><label>easeInOutBounce</label><br />
+</section>
+<nav>
+	<div class="miboton arr" onclick="arriba()"></div><br />
+	<div class="miboton aba" onclick="abajo()"></div>
+</nav>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+<script src="http://hammerjs.github.io/dist/hammer-time.min.js"></script>
+<script src="js/scroller-content.js"></script>
+</body>
+</html>

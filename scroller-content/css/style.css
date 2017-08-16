@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+	margin: 0;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.midiv {
+	font-size: 16em;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	color: white;
+}
+.midiv:nth-child(1) { background-color: #555dff; }
+.midiv:nth-child(2) { background-color: green;	}
+.midiv:nth-child(3) { background-color: salmon; }
+.midiv:nth-child(4) { background-color: rebeccapurple; }
+.midiv:nth-child(5) { background-color: crimson; }
+.midiv:nth-child(6) { background-color: steelblue; }
+section {
+	font-family: "Open Sans";
+	position: fixed;
+	top: 0;
+	padding: 0 1em 1em 0;
+	border-bottom-right-radius: 1em;
+	background-color: #d500ff;
+	width: 0;
+	height: 0;
+}
+section:hover {
+	width: auto;
+	height: auto;
+	color: rgb(10,10,10);
+	background-color: rgba(200,200,200,0.6);
+}
+section > input,
+section > label {
+	display: none;
+	opacity: 0;
+}
+section:hover > input,
+section:hover > label {
+	display: initial;
+	opacity: 1;
+}
+nav {
+	cursor: pointer;
+	position: fixed;
+	left: 10%;
+    bottom: 10%;
+}
+
+.miboton {
+	box-sizing: border-box;
+	margin: 0 auto;
+	width: 4em;
+	height: 4em;
+	border-radius: 3em;
+
+	background-position: center;
+	background-size: 1.5em;
+	background-repeat: no-repeat;
+	background-color: rgba(211,211,211,0);
+	border: 0.3em solid rgba(211,211,211,0.8);
+
+	animation: botones-out 0.3s ease-out forwards;
+}
+.miboton:hover { animation: botones-in 0.3s ease-in forwards; }
+.miboton:active { animation: botones-click 0.1s ease-in forwards; }
+.miboton.arr { background-image: url("../img/arrow-up.png"); }
+
+.miboton.aba { background-image: url("../img/arrow-down.png"); }
+
+@keyframes botones-in {
+	0% {
+	}
+	50% {
+		border: 0.6em solid rgba(211,211,211,0.3);
+		transform: scale(1.35);
+	}
+	100% {
+		border: 0.3em solid rgba(211,211,211,0);
+		background-color: rgba(211,211,211,0.2);
+		transform: scale(1.25);
+	}
+}
+@keyframes botones-click {
+	0% {
+		border: 0.3em solid rgba(211,211,211,0);
+		background-color: rgba(211,211,211,0.2);
+		transform: scale(1.25);
+	}
+	100% {
+		border: 0.3em solid rgba(211,211,211,0);
+		background-color: rgba(211,0,0,0.9);
+		transform: scale(1.25);
+	}
+}
+@keyframes botones-out {
+	0% {
+		border: 0.3em solid rgba(211,211,211,0);
+		background-color: rgba(211,211,211,0.2);
+		transform: scale(1.25);
+	}
+	50% {
+		border: 0.6em solid rgba(211,211,211,0.3);
+		transform: scale(1.35);
+	}
+	100% {
+
+	}
+}
+
+p.instrucciones {
+	text-align: left;
+	margin-top: initial;
+	font-size: initial;
+	font-family: "Open Sans";
+	margin: 0 auto;
+	width: 45%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Efecto barra progreso | Juan Romero</title>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+	body {
+		font-family: "Roboto";
+	}
+	div {
+		background-color: orange;
+		width: 100px;
+		height: 50px;
+	}
+</style>
+</head>
+<body>
+	<p>Haz click en la barra y arrastra el ratón</p>
+	<div>
+	</div>
+</body>
+<script>
+	var lastX;
+	var rect = document.querySelector('div');
+	rect.addEventListener('mousedown', function(event) {
+		if (event.which == 1) {
+			lastX = event.pageX;
+			addEventListener('mousemove', moved);
+			event.preventDefault();
+		}
+	});
+
+	function buttonPressed(event) {
+		if (event.button == null) {
+			return event.buttons = 0;
+		} else {
+			return event.buttons !=0;
+		}
+	}
+
+	function moved(event) {
+		if (!buttonPressed(event)) {
+			removeEventListener('mousedown', moved);
+		} else {
+			var dist = event.pageX -lastX;
+			var newWidth = Math.max(10, rect.offsetWidth + dist);
+			rect.style.width = newWidth + 'px';
+			lastX = event.pageX;
+		}
+	}
+</script>
+</html>

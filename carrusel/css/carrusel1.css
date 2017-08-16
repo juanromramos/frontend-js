@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  font-family: "Roboto";
+}
+
+.meridiad-carrusel1 {
+  height: 492px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 0px;
+  /*background: #E69797;*/
+  overflow: hidden;
+  text-align: left;
+}
+
+.carrusel1-contenedor {
+  width: 100%;
+  height: 492px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input.carrusel1-control {
+  display: none;
+}
+
+.carrusel1-control {
+  width: 258px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 10%;
+  bottom: 40%;
+  z-index: 999;
+}
+
+h1.carrusel1-control {
+  text-transform: uppercase;
+  color: rgb(58, 67, 75);
+  font-size: 3em;
+}
+
+h2.carrusel1-control {
+  color: rgb(218,137,45);
+  text-transform: uppercase;
+}
+
+p.carrusel1-control {
+  font-family: Lora;
+  font-style: italic;
+  color: #DA892D;
+}
+
+.carrusel1-botones {
+  position: absolute;
+  width: 100%;
+  top: 25px;
+}
+
+.carrusel1-botones .carrusel1-control {
+  position: relative;
+}
+
+label.carrusel1-control {
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+label.carrusel1-control:hover {
+  opacity: 0.3;
+}
+
+input.carrusel1-control:checked + label {
+  opacity: 1;
+}
+
+label.carrusel1-control h2 {
+  /*font-family: Minimo-Bold;*/
+  text-transform: uppercase;
+  color: rgb(218, 137, 45);
+}
+
+#s1 {/* bottom: 40%;*/ }
+
+#s2 { bottom: 30%; }
+
+#s3 { bottom: 20%; }
+
+#s1:hover,
+#s2:hover,
+#s3:hover {
+  opacity: .50;
+}
+
+input.carrusel1-control:checked ~ article.carrusel1-slide {
+  pointer-events: auto;
+  opacity: 1;
+  transition: 1s;
+  padding: 1em;
+}
+
+article.carrusel1-slide {
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  padding: 1em;
+}
+
+/* *********************
+  Slides
+* *********************/
+
+.carrusel1-slide .carrusel1-imagen {
+  height: 300px;
+}
+
+.carrusel1-slide .carrusel1-texto {
+  position: absolute;
+  width: 185px;
+  font-size: .75em;
+  text-align: left;
+  top: 65%;
+  right: 15%;
+  color: rgb(58,67,75);
+  font-family: Minimo;
+  font-style: normal;
+}
+
+.carrusel1-slide .carrusel1-texto:before {
+  content: "";
+  width: 15%;
+  height: 1px;
+  position: absolute;
+  background-color: #ecab18;
+  top: -10px;
+}
+
+/* *********************
+  Meridiad Botones 1
+* *********************/
+
+button.meridiad-botones1:focus {outline:0;}
+
+button.meridiad-botones1 {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid lightgrey;
+  background: none;
+  transition: border-color 0.1s ease-in;
+}
+
+button.meridiad-botones1:hover {
+  border-color: #ecab18;
+}
+
+button.meridiad-botones1:active {
+  border-color: black;
+}
+
+button.meridiad-botones1[data-direccion]:before,
+button.meridiad-botones1[data-direccion]:after {
+  display: inline-block;
+  content: attr(data-direccion);
+  font-size: 1.5em;
+  transition: 0.2s ease-in-out;
+}
+
+  button.izq:before, button.der:before {
+    position: absolute;
+  }
+
+  button.izq:after, button.der:before {
+    opacity: 0;
+  }
+
+  button.izq:after, button.der:hover::after {
+    transform: translateX(30px);
+  }
+
+  button.izq:hover::before, button.der:before {
+    transform: translateX(-30px);
+  }
+
+  button.izq:hover::before, button.der:hover::after {
+    opacity: 0;
+  }
+
+  button.izq:hover::after, button.der:hover::before {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+/* *********************
+  Media queries
+* *********************/
+
+@media only screen and (min-width: 31em) {
+  .carrusel1-slide .carrusel1-imagen { height: 400px; }
+
+  .carrusel1-slide .carrusel1-texto { right: 7%; font-size: 0.9em; }
+}
+
+@media only screen and (min-width: 40em) {
+  .carrusel1-slide .carrusel1-imagen { height: 400px; }
+
+  .carrusel1-slide .carrusel1-texto { width: 300px; top: 50%; font-size: 1em; }
+}

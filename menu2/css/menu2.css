@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url("fontello.css");
+
+/* *********************
+  Meridiad Menu 2
+* *********************/
+
+input#boton-menu,
+input#boton-contacto {
+  display: none;
+}
+
+.cont-menu-bar label {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #CBD7FF;
+  font-family: "Lato";
+}
+
+.cont-menu-bar {
+  width: 66px;
+  height: 100vh;
+  float: left;
+}
+
+.cont-main {
+  width: calc(100% - 66px);
+  height: 100vh;
+  float: right;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.cont-text {
+  padding: 0 0.9em;
+  text-align: justify;
+}
+
+.cont-menu-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cont-menu-bar > div {
+  border-right: 1px solid #FFFFFF;
+  box-shadow: -5px 0px 20px 8px #111111;
+}
+
+.menu2-menu {
+  width: auto;
+  height: 100%;
+  margin-left: -12em;
+  padding: 0 1em;
+  text-align: center;
+  position: fixed;
+
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: white;
+  background-color: #404040;
+  transition: 0.4s ease-out;
+}
+
+#boton-menu:checked ~ .cont-main {
+  opacity: 0.3;
+}
+
+#boton-menu:checked ~ .cont-menu-bar .menu2-menu {
+  margin-left: 66px;
+  visibility: visible;
+  opacity: 1;
+}
+.menu2-menu ul {
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0;
+  padding: 0 1em;
+  text-transform: uppercase;
+}
+
+.menu2-menu ul li {
+  width: 12em;
+}
+
+.menu2-menu ul a {
+  position: relative;
+  display: block;
+  padding: 1.15em;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.menu2-menu ul:hover a {
+  opacity: 0.2;
+}
+
+.menu2-menu ul a:hover {
+  opacity: 1;
+}
+
+    .menu2-menu ul a:before {
+      content: "";
+      position: absolute;
+      top: 1.55em;
+      left: 50%;
+      width: 0;
+      border-top: 2px solid #FFFFFF;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.15s ease-in-out;
+      transform: translate3d(-50%,0,0) rotate(-45deg);
+      z-index: -2;
+    }
+
+    .menu2-menu ul a:hover:before {
+      visibility: visible;
+      opacity: 1;
+      width: 62px;
+    }
+
+    .menu2-menu ul a:after {
+      content: "";
+      z-index: -1;
+      width: 100%;
+      height: 1.1em;
+      position: absolute;
+      left: 0;
+      display: block;
+      background-color: #404040;
+      top: 35%;
+    }
+
+.menu2-menu .menu2-icons {
+  font-family: fontello;
+  cursor: pointer;
+}
+
+.menu2-menu .menu2-icons a {
+  display: inline-block;
+  width: 1.5em;
+  font-size: 24px;
+  transition: 0.3s ease-out;
+}
+
+.menu2-menu .menu2-icons a:hover {
+  color: #000000;
+}
+
+.menu2-contacto {
+  width: auto;
+  height: 100%;
+  margin-left: -12em;
+  padding: 0 1em;
+  text-align: center;
+  position: fixed;
+
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: white;
+  background-color: #404040;
+  transition: 0.4s ease-out;
+}
+
+#boton-contacto:checked ~ .cont-menu-bar .menu2-contacto {
+  margin-left: 300.5px;
+  visibility: visible;
+  opacity: 1;
+}
+    .contacto-newsletter {
+      margin-bottom: 7em;
+    }
+    .contacto-email:focus {outline:0;}
+    .contacto-email {
+      background: none;
+      border: none;
+      border-bottom: 2px solid #FFFFFF;
+      font-size: 0.7em;
+      width: 220px;
+      text-align: center;
+      font-family: "Lato";
+      color: white;
+      text-transform: uppercase;
+    }
+
+.menu2-nav{
+  text-align: center;
+  background-color: #a35cf5;
+  position: fixed;
+  height: 100%;
+  width: 66px;
+  border-right: 1px solid white;
+}
+
+/* *********************
+  Meridiad Botones 3
+* *********************/
+
+.menu2-nav > label {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  top: 50%;
+  overflow: hidden;
+}
+
+.boton-menu-icono-linea {
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 1px;
+  background-color: white;
+  left: 10px;
+  top: 50%;
+  transition: 0.4s cubic-bezier(.19,1,.22,1);
+}
+
+    .menu2-nav .boton-menu-icono-linea:first-child { margin-top: -12px; }
+    .menu2-nav .boton-menu-icono-linea:last-child { margin-top: 12px; }
+
+    .menu2-nav > label:hover .boton-menu-icono-linea,
+    #boton-menu:checked ~ .cont-menu-bar .menu2-nav > label .boton-menu-icono-linea {
+      transform: rotate(45deg);
+    	margin-top: 0;
+    }
+
+    #boton-menu:checked ~ .cont-menu-bar .menu2-nav > label .boton-menu-icono-linea:last-child {
+      transform: rotate(135deg);
+    }
+
+.boton-cerrar-contacto {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 8px;
+    right: 0px;
+}
+
+    .boton-contacto-icono-linea {
+      display: block;
+      position: absolute;
+      width: 26px;
+      height: 1px;
+      background-color: #FFFFFF;
+      left: 10px;
+      top: 50%;
+      transition: 0.4s cubic-bezier(.19,1,.22,1) 0.4s;
+    }
+
+    #boton-contacto:checked ~ .cont-menu-bar .menu2-contacto .boton-contacto-icono-linea:first-child {
+      transform: rotate(45deg);
+    }
+
+    #boton-contacto:checked ~ .cont-menu-bar .menu2-contacto .boton-contacto-icono-linea:last-child {
+      transform: rotate(135deg);
+    }

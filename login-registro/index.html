@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Login/registro | Juan Romero</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
+	<script src="js/onready.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/ajax.js"></script>
+</head>
+<body>
+	<p style="text-align: center">Es necesario utilizar un servidor PHP para poder habilitar la funcionalidad de registro de cuenta<br />
+		Los usuarios de prueba y sus contraseñas son:
+		'juan@gmail.com' => 'juan1234',
+		'pepe@gmail.com' => 'pepe1234',
+		'paco@gmail.com' => 'paco1234'
+	</p>
+</p>
+	<main>
+		<div>
+			<input id='item1' name='radio' type='radio'></input>
+			<label for='item1'>o <span>crear una cuenta</span></label>
+			<h3>Iniciar sesión</h3>
+				<form id="login">
+					<div>
+						<span>Introduce tu dirección de correo electrónico.</span>
+						<input type="text" id="email" placeholder="Correo electrónico">
+					</div>
+					<div>
+						<span>Introduce tu contraseña.</span>
+						<input type="password" id="password" placeholder="Contraseña" disabled>
+					</div>
+					<p>o <span>enviarme un enlace para iniciar sesión</span></p>
+					<div>
+						<input type='checkbox' id='recordar' checked>
+						<label for='recordar'>Recordarme</label>
+					</div>
+
+					<div>
+						<input type="submit" value="Iniciar sesión" >
+					</div>
+					<p><span>¿Has olvidado tu contraseña?</span></p>
+				</form>
+		</div>
+		<div>
+			<input id='item2' name='radio' type='radio' checked></input>
+			<label for='item2'>o <span>iniciar sesión</span></label>
+			<h3>Crear una cuenta</h3>
+			<article>
+				<form id="register">
+					<div>
+						<span>Introduce tu nombre</span>
+						<input type="text" id="nombre" placeholder="Nombre">
+					</div>
+					<div>
+						<span>Introduce tus apellidos</span>
+						<input type="text" id="apellidos" placeholder="Apellidos">
+					</div>
+					<div>
+						<span>Introduce un correo electrónico válido</span>
+						<input type="text" id="email2" placeholder="Correo electrónico">
+					</div>
+					<div>
+						<span>Introduce una contraseña</span>
+						<input type="password" id="password2" placeholder="Contraseña" disabled>
+					</div>
+					<div>
+						<span>Acepta las condiciones del servicio</span></br>
+						<input type='checkbox' id='aceptar'></input>
+						<label for='aceptar'>Acepto las <span>Condiciones de Dropbox</span></label>
+					</div>
+					<div>
+						<input type="submit" value="Crear una cuenta">
+					</div>
+					<div>
+						<span>o</span>
+						<a href='https://www.google.es/search?q=google%2B+meme&safe=off&biw=1202&bih=597&tbm=isch&source=lnms&sa=X&ved=0ahUKEwjhoanyhKrLAhWKPxQKHVl0DjQQ_AUIBigB'>Registrate con Google</a>
+					</div>
+				</form>
+			</article>
+		</div>
+	</main>
+</body>
+</html>

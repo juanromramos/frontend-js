@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carrusel | Juan Romero</title>
+	<link rel="stylesheet" href="css/carrusel1.css">
+	<script src="js/meridiad-carrusel1.js"></script>
+</head>
+<body>
+<div class="meridiad-carrusel1">
+	<div class="carrusel1-contenedor">
+		<div class="carrusel1-botones">
+			<p class="carrusel1-control">Efecto Carrusel 1</p>
+			<h1 class="carrusel1-control">Somos más que</h1>
+			<!--
+			<button class="meridiad-botones1 izq carrusel1-control" data-direccion="〈" onclick="cambiaSlide(-1)"></button>
+			<button class="meridiad-botones1 der carrusel1-control" data-direccion="〉" onclick="cambiaSlide(1)"></button>
+			-->
+			<button class="meridiad-botones1 izq carrusel1-control" data-direccion="&#8592;" onclick="cambiaSlide(-1)"></button>
+			<button class="meridiad-botones1 der carrusel1-control" data-direccion="&#8594;" onclick="cambiaSlide(1)"></button>
+
+		</div>
+		<div>
+		    <input checked type="radio" name="slide" class="carrusel1-control" id="slide1" />
+	        <label for="slide1" class="carrusel1-control" id="s1"><h2>Publicidad</h2></label>
+		    <article class="carrusel1-slide" id="slide1">
+		    	<p class="carrusel1-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a accumsan lacus. Nulla tincidunt sagittis maximus. Quisque pellentesque venenatis egestas.</p>
+		    	<img class="carrusel1-imagen" src="img/iphone.png">
+		    </article>
+	    </div>
+	    <div>
+		    <input type="radio" name="slide" class="carrusel1-control" id="slide2"/>
+	        <label for="slide2" class="carrusel1-control" id="s2"><h2>Comunicación</h2></label>
+		    <article class="carrusel1-slide" id="slide2">
+		    	<p class="carrusel1-texto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+	          <img class="carrusel1-imagen" src="img/iphone2.png">
+		    </article>
+	    </div>
+	    <div>
+		    <input type="radio" name="slide" class="carrusel1-control" id="slide3"/>
+	        <label for="slide3" class="carrusel1-control" id="s3"><h2>Estrategia</h2></label>
+		    <article class="carrusel1-slide" id="slide3">
+		    	<p class="carrusel1-texto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+		    	<img class="carrusel1-imagen" src="img/iphone3.png">
+		    </article>
+	    </div>
+	</div>
+</div>
+</body>
+</html>
